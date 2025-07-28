@@ -6,3 +6,9 @@ dist/
 .pytest_cache/
 env/
 .venv/
+syllable_elixir/_build/
+syllable_elixir/deps/
+syllable_elixir/erl_crash.dump
+syllable_elixir/.elixir_ls/
+syllable_elixir/cover/
+syllable_elixir/priv/syllable_model_weights.json
