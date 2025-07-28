@@ -8,6 +8,18 @@ The model is intentionally small in size, so that it can run fast.
 
 The model is probably terrible for non-English words.
 
+## Installation
+
+### Requirements
+- Python 3.9-3.12
+- TensorFlow 2.16+ (automatically installs Keras 3)
+
+### Install
+```bash
+pip install -e .
+```
+
+### Usage
 ```py
 >>> from syllable import CmudictSyllableCounter, ModelSyllableCounter
 >>> csc, msc = CmudictSyllableCounter(), ModelSyllableCounter()

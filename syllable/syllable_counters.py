@@ -5,7 +5,14 @@ from pathlib import Path
 from typing import Iterable, Tuple
 
 import numpy as np
-from keras import models
+try:
+    # Try modern TensorFlow first (2.16+)
+    import tensorflow as tf
+    from tensorflow import keras
+    models = keras.models
+except ImportError:
+    # Fallback for older versions
+    from keras import models
 
 from .char_encoder import CharacterEncoder
 

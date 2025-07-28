@@ -1,3 +1,42 @@
 [build-system]
 requires = ["setuptools >= 40.9.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "syllable"
+version = "0.1.0"
+description = "Count syllables"
+authors = [
+    {name = "meooow25", email = "soumiksarkar.3120@gmail.com"}
+]
+requires-python = ">=3.9,<3.10"
+dependencies = [
+    "tensorflow==2.10.0",
+    "tensorflow-io-gcs-filesystem==0.31.0",
+    "numpy>=1.21.0,<2.0.0"
+]
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["syllables", "nlp", "language", "pronunciation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/meooow25/syllable"
+"Bug Tracker" = "https://github.com/meooow25/syllable/issues"
+
+[tool.setuptools.packages.find]
+include = ["syllable*"]
+
+[tool.setuptools.package-data]
+syllable = ["cmudict/*", "model_data/*", "model_data/model/*", "model_data/model/variables/*"]
